@@ -1,0 +1,34 @@
+version: "3"
+
+services:
+  postgres-service:
+    image: postgres
+    tty: true
+    environment: 
+      POSTGRES_USER: "admin_pgadmin"
+      POSTGRES_PASSWORD: "aTianYmANASA"
+      POSTGRES_DB: "NodeApp"
+    ports:
+      - "5432:5432"
+    volumes:
+      - ~/PostgreSQL:/var/lib/postgresql/data
+    restart: unless-stopped
+    networks:
+      - pg-network
+  
+  pgadmin-service:
+    image: dpage/pgadmin4
+    tty: true
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "admin_pgadmin@mail.com"
+      PGADMIN_DEFAULT_PASSWORD: "osTEVeREncOR"
+    ports:
+      - "5433:80"
+    depends_on:
+      - postgres-service
+    networks:
+      - pg-network
+
+networks:
+  pg-network:
+    driver: bridge
