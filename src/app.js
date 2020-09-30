@@ -2,7 +2,7 @@ const express = require('express')
 
 class AppController { 
   routes() {
-    this.express.use(require('./routes').default)
+    this.express.use(require('./routes'))
   }
 
   middlewares() {
