@@ -5,9 +5,9 @@ services:
     image: postgres
     tty: true
     environment: 
-      POSTGRES_USER: "admin_pgadmin"
-      POSTGRES_PASSWORD: "aTianYmANASA"
-      POSTGRES_DB: "NodeApp"
+      POSTGRES_USER: admin_pgadmin
+      POSTGRES_PASSWORD: aTianYmANASA
+      POSTGRES_DB: NODEAUTH
     ports:
       - "5432:5432"
     volumes:
@@ -20,8 +20,8 @@ services:
     image: dpage/pgadmin4
     tty: true
     environment:
-      PGADMIN_DEFAULT_EMAIL: "admin_pgadmin@mail.com"
-      PGADMIN_DEFAULT_PASSWORD: "osTEVeREncOR"
+      PGADMIN_DEFAULT_EMAIL: admin_pgadmin@mail.com
+      PGADMIN_DEFAULT_PASSWORD: osTEVeREncOR
     ports:
       - "5433:80"
     depends_on:
