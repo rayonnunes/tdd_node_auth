@@ -2,7 +2,6 @@
 This repository contains a basic REST API with a simple jwt login endpoint and middleware to check authentication but implemented using concepts of TDD
 
 ## Technologies
----
 - Nodejs
 - Express
 - PostgreSQL
@@ -12,7 +11,6 @@ This repository contains a basic REST API with a simple jwt login endpoint and m
 - Jest
 
 ## Installing dependencies
----
 To manage the dependencies, this project uses preferably yarn, but you can feel free to use npm instead. If you want to use yarn but don't have it yet, check out the [installation guide from official documentation](https://yarnpkg.com/getting-started/install)
 
 With yarn installed open your favorite shell in the root folder of this project and then run:
@@ -25,7 +23,6 @@ npm i
 ```
 
 ## Running Application (Development)
----
 Running the application in development mode allows it to take advantage of nodemon to restart the server for every change, to start the server in development mode, simply run:
 ```bash
 yarn dev
@@ -33,7 +30,6 @@ yarn dev
 
 
 ## Running Tests 
----
 To test the application, the environment is changed in such a way that the DB becomes SQLite instead of PostgreSQL to not affect the possible production database. 
 
 All the migrations are executed before the tests and undone after the tests (see `pretest` and `posttest` scripts respectively in the `package.json` file for more info)
