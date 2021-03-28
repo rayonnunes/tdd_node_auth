@@ -3,10 +3,11 @@ require('dotenv').config({
 })
 
 const express = require('express')
+const routes = require('./routes')
 
 class AppController { 
   routes() {
-    this.express.use(require('./routes'))
+    this.express.use(routes)
   }
 
   middlewares() {

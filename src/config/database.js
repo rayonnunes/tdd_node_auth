@@ -4,12 +4,13 @@ require('dotenv').config({
 
 module.exports = {
   host: process.env.DB_HOST || '127.0.0.1',
-  username: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  database: process.env.DB_NAME,
+  username: process.env.DB_USER || '',
+  password: process.env.DB_PASS || '',
+  database: process.env.DB_NAME || '',
   dialect:  process.env.DB_DIALECT || 'postgres',
-  storage: './__tests__/database.sqlite',
+  operatorsAliases: false,
   logging: false,
+  storage: './__tests__/database.sqlite',
   define: {
     timestamps: true, // gera campos created_at e updated_at automaticamente
     underscored: true, // cria tabela com o model em snake_case (UserGroup => user_groups)
