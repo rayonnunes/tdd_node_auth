@@ -1,5 +1,4 @@
 # tdd_node_auth
----
 This repository contains a basic REST API with a simple jwt login endpoint and middleware to check authentication but implemented using concepts of TDD
 
 ## Technologies
