@@ -27,7 +27,10 @@ Running the application in development mode allows it to take advantage of nodem
 ```bash
 yarn dev
 ```
-
+Or if you choose to use npm, run:
+```bash
+npm run dev
+```
 
 ## :clapper: Running Tests 
 To test the application, the environment is changed in such a way that the DB becomes SQLite instead of PostgreSQL to not affect the possible production database. 
@@ -38,6 +41,10 @@ Also, the database is truncated before every test in order to avoid any bias on 
 
 ```bash
 yarn test
+```
+Or if you choose to use npm, run:
+```bash
+npm run test
 ```
 
 ## :telescope: Future Plannings
